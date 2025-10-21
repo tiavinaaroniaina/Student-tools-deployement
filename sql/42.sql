@@ -78,7 +78,7 @@ CREATE TABLE Locations(
 );
 
 -- Table User_candidatures
-CREATE TABLE User_candidatures (
+CREATE TABLE candidature(
     id SERIAL PRIMARY KEY,
     user_id VARCHAR(250) NOT NULL,
     birth_date DATE,
