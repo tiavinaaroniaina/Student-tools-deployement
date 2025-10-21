@@ -1,0 +1,63 @@
+:root {
+  --background-color-light: #f0f2f5;
+  --text-color-light: #333;
+  --header-bg-light: #fff;
+  --sidebar-bg-light: #fff;
+}
+
+.dark-mode {
+  --background-color-dark: #1a1a1a;
+  --text-color-dark: #f0f2f5;
+  --header-bg-dark: #242526;
+  --sidebar-bg-dark: #242526;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle-button, .logout-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle-button:hover, .logout-button:hover {
+  background-color: var(--primary-dark-color);
+}
+
+.profile-card {
+  background-color: var(--header-bg-light);
+}
+
+.dark-mode .profile-card {
+  background-color: var(--header-bg-dark);
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-light);
+}
+
+.dark-mode .sidebar {
+  background-color: var(--sidebar-bg-dark);
+}

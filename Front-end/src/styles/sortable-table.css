@@ -1,0 +1,203 @@
+/* Modern Sortable Table */
+.sortable-table-container {
+  width: 100%;
+  margin: var(--spacing-lg) 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+  background: rgba(26, 15, 58, 0.4);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sortable-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.sortable-table thead {
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.15) 0%, rgba(0, 255, 242, 0.08) 100%);
+  border-bottom: 2px solid rgba(0, 255, 204, 0.3);
+}
+
+.sortable-table th {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  color: var(--accent-cyan);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.sortable-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-smooth);
+}
+
+.sortable-table th.sortable:hover {
+  background: rgba(0, 255, 204, 0.1);
+  color: var(--accent-blue);
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  justify-content: space-between;
+}
+
+.sort-icon {
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  opacity: 0.6;
+  transition: var(--transition-smooth);
+}
+
+.sortable-table th.sortable:hover .sort-icon {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.sortable-table tbody tr {
+  border-bottom: 1px solid rgba(0, 255, 204, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.sortable-table tbody tr:hover {
+  background: rgba(0, 255, 204, 0.05);
+  transform: translateX(2px);
+}
+
+.sortable-table td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.sortable-table td.no-data {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+}
+
+.pagination-btn {
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.15) 0%, rgba(0, 255, 242, 0.08) 100%);
+  border: 1px solid rgba(0, 255, 204, 0.3);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.25) 0%, rgba(0, 255, 242, 0.15) 100%);
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 255, 204, 0.2);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: rgba(26, 15, 58, 0.4);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.pagination-info {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .sortable-table {
+    font-size: 0.9rem;
+  }
+  
+  .sortable-table th,
+  .sortable-table td {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+@media (max-width: 767px) {
+  .sortable-table {
+    font-size: 0.85rem;
+  }
+  
+  .sortable-table th {
+    font-size: 0.75rem;
+    padding: var(--spacing-sm);
+  }
+  
+  .sortable-table td {
+    padding: var(--spacing-sm);
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .pagination-btn {
+    min-width: auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.85rem;
+  }
+  
+  .pagination-info {
+    width: 100%;
+    order: -1;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 575px) {
+  .table-wrapper {
+    border-radius: calc(var(--border-radius) / 1.5);
+  }
+  
+  .sortable-table th,
+  .sortable-table td {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .th-content {
+    gap: var(--spacing-xs);
+  }
+  
+  .sort-icon {
+    font-size: 0.85rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .sortable-table th.sortable,
+  .pagination-btn {
+    min-height: 44px;
+  }
+}

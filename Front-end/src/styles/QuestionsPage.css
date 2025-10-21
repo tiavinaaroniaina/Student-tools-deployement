@@ -1,0 +1,90 @@
+/* src/styles/QuestionsPage.css */
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.question-header {
+    text-align: center;
+}
+
+.question-header h3 {
+    color: var(--accent-cyan);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.question-header h2 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
+
+.answers-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.answer-option:hover {
+    background: rgba(0, 255, 204, 0.1);
+    border-color: var(--accent-cyan);
+}
+
+.answer-option input[type="radio"] {
+    margin-right: var(--spacing-md);
+    /* Custom radio button styles can be added here */
+    accent-color: var(--accent-cyan);
+    width: 18px;
+    height: 18px;
+}
+
+.answer-option label {
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navigation-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-lg);
+}
+
+.navigation-footer .codepen-button {
+    min-width: 150px; /* Smaller buttons for navigation */
+}
+
+.score-container {
+    text-align: center;
+}
+
+.score-container h2 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.score-container p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.score-display {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-top: var(--spacing-lg);
+    text-shadow: var(--shadow-glow-cyan);
+}

@@ -1,0 +1,182 @@
+.contact-card {
+  padding: 0;
+}
+
+.statistique-content-card {
+  min-width: calc(100vw - 226.8px); /* Reduced width by approximately 6cm (4cm + previous 2cm) */
+  max-width: 100%; /* Ensure it doesn't exceed viewport */
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-lg);
+}
+
+.date-selection-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  align-items: flex-start;
+  background-color: var(--card-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+}
+
+.date-selection-form h3 {
+  margin-top: 0;
+  color: var(--text-primary);
+  font-size: 2rem;
+}
+
+.date-selection-form .date-group {
+  display: flex;
+  gap: var(--spacing-md);
+  width: 100%;
+  justify-content: space-between;
+}
+
+.date-selection-form label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: bold;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.date-selection-form input[type="date"] {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--input-background);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.date-selection-form input[type="date"]:focus {
+  border-color: var(--accent-cyan);
+  outline: none;
+}
+
+.codepen-button {
+  background-color: var(--accent-cyan);
+  color: var(--primary-bg);
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition-smooth);
+  align-self: flex-end;
+}
+
+.codepen-button:hover {
+  background-color: var(--accent-blue);
+}
+
+.codepen-button:disabled {
+  background-color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.chart-container {
+  background-color: var(--card-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  margin-top: var(--spacing-lg);
+  position: relative;
+  height: 600px; /* Maintained height */
+  width: 100%; /* Ensure full width within parent */
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: var(--spacing-xl);
+  font-size: 1.4rem;
+}
+
+.statistique-content-card h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-cyan, #00ffc2);
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.dashboard-title-stats {
+    color: var(--accent-cyan);
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 255, 242, 0.6); /* Changed shadow color to accent-blue */
+    margin-bottom: var(--spacing-md);
+    text-align: center; /* Ensure it's centered */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .date-selection-form {
+    align-items: stretch;
+  }
+
+  .date-selection-form .date-group {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .chart-container {
+    height: 400px; /* Maintained height for mobile */
+  }
+
+  .statistique-content-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .no-data {
+    font-size: 1.2rem;
+  }
+
+  .statistique-content-card {
+    min-width: 100%; /* Adjusted for mobile to avoid overflow */
+  }
+}
+
+/* Filter Controls for Year Selection */
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  justify-content: center; /* Center the filter controls */
+}
+
+.filter-controls label {
+  font-weight: bold;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.filter-controls select {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--input-background);
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Remove default select arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e0e0e0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.6c-5%200-9.3%201.8-13.2%205.4A17.6%2017.6%200%200%200%200%2082.6c0%204.8%201.8%209.3%205.4%2013.2l128%20128c3.9%203.9%208.4%205.4%2013.2%205.4s9.3-1.8%2013.2-5.4l128-128c3.9-3.9%205.4-8.4%205.4-13.2%200-4.8-1.8-9.3-5.4-13.2z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+}
+
+.filter-controls select:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--shadow-glow-cyan);
+}

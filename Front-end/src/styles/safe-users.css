@@ -1,0 +1,130 @@
+/* ===== Safe Users Container ===== */
+.safe-users-container {
+  background: var(--primary-bg, #0f172a);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 255, 242, 0.2);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1226px;
+  width: 95%;
+  overflow-x: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Title ===== */
+.safe-users-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-cyan, #00ffc2);
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* ===== Table ===== */
+.safe-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.safe-users-table th {
+  padding: 12px 15px;
+  text-align: left;
+  color: var(--accent-cyan, #00ffc2);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(0, 255, 204, 0.3);
+  background: rgba(0, 255, 204, 0.08);
+}
+
+.safe-users-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(0, 255, 204, 0.1);
+  color: var(--text-primary, #e5e7eb);
+}
+
+.safe-users-table tr:hover td {
+  background: rgba(0, 255, 204, 0.05);
+  transition: background 0.2s ease-in-out;
+}
+
+/* ===== Messages ===== */
+.loading-message,
+.error-message,
+.empty-message {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.error-message {
+  color: #f87171;
+}
+
+.empty-message {
+  color: var(--text-primary, #e5e7eb);
+}
+
+/* ===== Filter Input ===== */
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  margin: 5px 10px;
+}
+
+/* ===== Export Button ===== */
+.export-btn {
+  background: linear-gradient(90deg, #00ffc2, #00e0ff);
+  color: #0f172a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  align-self: center;
+}
+
+.export-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00e0ff, #00ffc2);
+}
+
+/* ===== Pagination ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.pagination button {
+  background: linear-gradient(90deg, #00ffc2, #00e0ff);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

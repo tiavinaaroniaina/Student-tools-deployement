@@ -1,0 +1,278 @@
+/* ===== Blackhole Container ===== */
+.blackhole-container {
+  background: var(--primary-bg, #0f172a);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 255, 242, 0.2);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1226px;
+  width: 95%;
+  overflow-x: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Title ===== */
+.blackhole-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-cyan, #00ffc2);
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* ===== Table ===== */
+.blackhole-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.blackhole-table th {
+  padding: 12px 15px;
+  text-align: left;
+  color: var(--accent-cyan, #00ffc2);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(0, 255, 204, 0.3);
+  background: rgba(0, 255, 204, 0.08);
+}
+
+.blackhole-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(0, 255, 204, 0.1);
+  color: var(--text-primary, #e5e7eb);
+}
+
+.blackhole-table tr:hover td {
+  background: rgba(0, 255, 204, 0.05);
+  transition: background 0.2s ease-in-out;
+}
+
+/* ===== Badge Couleurs ===== */
+.blackhole-badge {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.blackhole-badge.red {
+  background-color: #ef4444;
+}
+
+.blackhole-badge.orange {
+  background-color: #f97316;
+}
+
+.blackhole-badge.yellow {
+  background-color: #eab308;
+}
+
+.blackhole-badge.none {
+  background-color: #6b7280;
+}
+
+/* ===== Notifier Button ===== */
+.notify-btn {
+  background: linear-gradient(90deg, #00ffc2, #00e0ff);
+  color: #0f172a;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.notify-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00e0ff, #00ffc2);
+}
+
+/* ===== Pagination ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.pagination button {
+  background: linear-gradient(90deg, #00ffc2, #00e0ff);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ===== Messages ===== */
+.loading-message,
+.error-message,
+.empty-message {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.error-message {
+  color: #f87171;
+}
+
+.empty-message {
+  color: var(--text-primary, #e5e7eb);
+}
+
+/* ===== Filter Input ===== */
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  margin: 5px 10px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 204, 0.3);
+  background: rgba(0, 255, 204, 0.05);
+  color: var(--text-primary, #e5e7eb);
+  outline: none;
+  width: 200px;
+  transition: border 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: var(--accent-cyan, #00ffc2);
+}
+
+/* ===== Suggestions List ===== */
+.suggestions-list {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background: var(--primary-bg, #0f172a);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestions-list li {
+  padding: 6px 12px;
+  cursor: pointer;
+  color: var(--text-primary, #e5e7eb);
+}
+
+.suggestions-list li:hover {
+  background: rgba(0, 255, 204, 0.08);
+}
+
+/* ===== Notification Message ===== */
+.notification {
+  background: #00ffc2;
+  color: #0f172a;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 255, 204, 0.2);
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .blackhole-table th,
+  .blackhole-table td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .blackhole-badge {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+  }
+
+  .pagination button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .input-container input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blackhole-container {
+    padding: 20px;
+  }
+
+  .blackhole-table {
+    font-size: 0.8rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-container input {
+    width: 100%;
+  }
+}
+
+/* ===== Export Button ===== */
+.export-btn {
+  background: linear-gradient(90deg, #00ffc2, #00e0ff);
+  color: #0f172a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  align-self: center;
+}
+
+.export-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00e0ff, #00ffc2);
+}

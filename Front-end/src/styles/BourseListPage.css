@@ -1,0 +1,38 @@
+.bourse-categories {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* No need for .category-button styles anymore, as we are using .btn-modern */
+
+@media (max-width: 767px) {
+  .bourse-categories {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    align-items: center; /* Center the buttons */
+  }
+
+  .btn-modern {
+    width: 80%; /* Make buttons take more width on mobile */
+    text-align: center;
+  }
+}
+
+.eligible-families-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  color: var(--text-primary);
+}
+
+.eligible-families-table th, .eligible-families-table td {
+  border: 1px solid var(--border-color);
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.eligible-families-table th {
+  background-color: var(--secondary-bg);
+}

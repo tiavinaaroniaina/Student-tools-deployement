@@ -1,0 +1,189 @@
+/* ===== Sidebar ===== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px; /* réduit par défaut */
+    height: 100vh;
+    background: #0a042b;
+    color: #fff;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden; /* Keep horizontal overflow hidden */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.sidebar:hover {
+    width: 250px; /* s’élargit au hover */
+    padding: 20px 10px;
+}
+
+.sidebar-logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a span {
+    margin-left: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar:hover ul li a span,
+.sidebar.visible ul li a span {
+    opacity: 1;
+}
+
+.sidebar ul li.has-submenu ul.submenu {
+    display: none;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.sidebar ul li.has-submenu:hover ul.submenu {
+    display: block;
+}
+
+/* Footer */
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 255, 204, 0.2);
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 255, 204, 0.2);
+}
+
+.sidebar-logout a {
+    display: flex;
+    align-items: center;
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidebar-logout a span {
+    margin-left: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar:hover .sidebar-logout a span {
+    opacity: 1;
+}
+
+.sidebar-logout a svg {
+    margin-right: 0;
+    font-size: 1.2rem;
+}
+
+
+/* Icons */
+.sidebar ul li a svg {
+    margin-right: 0; /* pas d’espace quand réduit */
+    font-size: 1.2rem;
+}
+
+/* Smooth transitions */
+.sidebar,
+.sidebar ul li a,
+.sidebar-logo img {
+    transition: all 0.3s ease;
+}
+
+/* Hover invisible zone */
+.hover-area {
+    display: none; /* on n'utilise plus hover sur mobile */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px; /* réduit par défaut */
+        padding: 10px 5px;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+        width: 250px;
+        padding: 20px 10px;
+    }
+}
+
+.sidebar ul li.has-submenu .submenu-calendar {
+  display: block;
+  margin-top: 5px;
+  margin-left: 15px;
+  background: #0a042b;
+  border-radius: 6px;
+  padding: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.sidebar ul li.has-submenu .submenu-calendar li a {
+  padding: 8px 10px;
+  color: #00ffcc;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar ul li.has-submenu .submenu-calendar li a:hover {
+  background: rgba(0, 255, 204, 0.1);
+}
+
+.sidebar ul li.has-submenu .submenu-calendar li a span {
+  margin-left: 8px;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

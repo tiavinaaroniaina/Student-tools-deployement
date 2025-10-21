@@ -1,0 +1,136 @@
+PHOTO DE FAMILLE
+Nom de l'animateur :
+Nom de la famille :
+Nombre de personnes dans le foyer :
+Date :
+Score total :
+
+---
+
+ECONOMIE
+
+1. Nombre de personnes à charge par adulte ayant un revenu
+   - 0 point : 4 ou plus     
+   - 1 point : 3
+   - 2 points : 2
+   - 3 points : 0 ou 1
+
+2. Activité de l'adulte principal gagne-pain du foyer
+   - 0 point : Aucune (par exemple les retraités)
+   - 1 point : Occasionnelle, régulière
+   - 2 points : Régulière mais non déclarée ou multiple
+   - 3 points : Régulière et formelle / diversifiée
+
+3. Régularité de l'épargne
+   - 0 point : Aucune
+   - 1 point : De manière informelle (chez soi, tontine, etc.)
+   - 2 points : Sur un compte bancaire mais irrégulièrement
+   - 3 points : Régulièrement sur un compte bancaire
+
+4. Estimation des dépenses / jour / pers.
+   - 0 point : < 5 000 Ar
+   - 1 point : 5 000–10 000 Ar
+   - 2 points : 10 000–20 000 Ar
+   - 3 points : > 20 000 Ar
+
+---
+
+SANTE
+
+5. Nutrition
+   - 0 point : Malnutrition sévère, visible / cas de survie OU 1 repas/jour
+   - 1 point : 2 repas / jour
+   - 2 points : Repas réguliers (3/jour) mais pas varié
+   - 3 points : Repas réguliers (3/jour) et varié
+
+6. Possibilité de payer pour une dépense de santé "importante"
+   - 0 point : Pas de solution (pas de soins ou emprunt)
+   - 1 point : Aide proche (famille, voisins, ONG)
+   - 2 points : Paiement via épargne ou ressources propres
+   - 3 points : Système d'assurance formelle
+
+7. Mortalité infantile
+   - 0 point : 2 enfants ou plus sont déjà décédés dans la famille durant les 5 dernières années
+   - 1 point : 1 enfant est déjà décédé dans la famille durant les 5 dernières années
+   - 2 points : 1 enfant est déjà décédé dans la famille (pas de limite de date)
+   - 3 points : Pas de décès d'enfant dans la famille
+
+---
+
+EDUCATION
+
+8. Scolarisation des enfants
+   - 0 point : Aucun enfant en âge d'aller à l'école n'est scolarisé
+   - 1 point : Au moins 1 enfant est scolarisé, pas nécessairement dans le cycle correspondant à leur âge
+   - 2 points : Au moins la moitié des enfants sont scolarisés, pas nécessairement dans le cycle correspondant à leur âge
+   - 3 points : Tous les enfants en âge d'aller à l'école sont scolarisés / pas d'enfants en âge d'aller à l'école
+
+9. Niveau d'éducation maximum dans la famille
+   - 0 point : Analphabète
+   - 1 point : Niveau primaire atteint
+   - 2 points : Niveau secondaire atteint
+   - 3 points : Baccalauréat et plus
+
+---
+
+SOCIAL
+
+10. Documents administratifs
+   - 0 point : Aucun document valide pour aucun membre
+   - 1 point : Au moins 1 copie manquante ou invalide
+   - 2 points : Aucune copie manquante mais au moins 1 CIN manquante ou invalide
+   - 3 points : Aucun papier administratif ne manque
+
+11. Niveau d'hygiène (corporel / vestimentaire / habitat)
+   - 0 point : Problèmes sur les 4 domaines
+   - 1 point : Problèmes sur 2 ou 3 domaines
+   - 2 points : Problèmes sur 1 domaine
+   - 3 points : Aucun problème sur les 4 domaines
+
+---
+
+CONFORT DE VIE
+
+12. Électricité
+   - 0 point : Pas d'éclairage
+   - 1 point : Éclairage à la bougie / pétrole / lampe torche
+   - 2 points : Électricité illégale
+   - 3 points : Réseau légal / Groupe électrogène / Convertisseur
+
+13. Toilettes
+   - 0 point : Pas d'équipement : défécation à l'air libre
+   - 1 point : Aménagements en commun
+   - 2 points : Aménagement individuel (fosse / latrine)
+   - 3 points : Toilettes individuelles reliées à un égout
+
+14. Eau potable
+   - 0 point : Pas d'accès à une eau potable
+   - 1 point : Achat d'eau potable en bidon ou point éloigné
+   - 2 points : Point d'eau potable à moins de 30 min aller-retour
+   - 3 points : Eau potable courante au domicile
+
+15. Habitat
+   - 0 point : Problème sur les 4 domaines : mur, toit, sol, taille
+   - 1 point : Problème sur 2 ou 3 domaines
+   - 2 points : Problème sur 1 domaine
+   - 3 points : Aucun problème sur les 4 domaines
+
+16. Combustible pour la cuisine
+   - 0 point : Aucun
+   - 1 point : Bois, tout-venant
+   - 2 points : Charbon
+   - 3 points : Gaz, pétrole ou autre
+
+17. Équipement / électroménager
+   - 0 point : Minimum (natte, ustensiles de cuisine, pas de meuble ni électroménager)
+   - 1 point : Petit mobilier rudimentaire et petit équipement électroménager (radio OU ventilateur OU télévision)
+   - 2 points : Mobilier de base (lit, placard), plusieurs équipements électroménagers
+   - 3 points : Confort (table, chaise, frigo, …)
+
+---
+
+TOTALS
+- Total 0 point :
+- Total 1 point :
+- Total 2 points :
+- Total 3 points :
